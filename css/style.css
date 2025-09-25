@@ -1,6 +1,9 @@
 /* Basic, clean responsive styles */
 :root { --accent:#2196f3; --bg:#f8f9fa; --text:#222; }
 *{box-sizing:border-box}
+.brand {display: flex;
+  align-items: center;}.brand .logo { height: 30px; /* Adjust as needed */
+  margin-right: 10px;}
 body{font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:var(--text);margin:0}
 .container{max-width:1000px;margin:0 auto;padding:0 16px}
 .nav{background:#111;color:#fff;padding:12px 0;position:sticky;top:0;z-index:10}
