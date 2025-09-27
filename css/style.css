@@ -56,7 +56,7 @@ body{font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:
 .slideshow {
   position: relative;
   width: 100%;
-  height: 50vh; /* half screen height */
+  height: 80vh; /* half screen height */
 }
 
 .banner {
