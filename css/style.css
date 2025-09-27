@@ -49,46 +49,30 @@ body{font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:
 /* Hero Section */
 .hero {
   position: relative;
-  text-align: center;
-  color: white;
+  margin-top: 70px; /* fixes cut by navbar */
+  overflow: hidden;
 }
 
-.hero .banner {
+.slideshow {
+  position: relative;
   width: 100%;
-  height: 400px;
-  object-fit: cover;
-  display: none; /* for slideshow later */
+  height: 50vh; /* half screen height */
 }
 
-.hero .banner:first-child {
-  display: block; /* show first banner */
-}
-
-.hero-text {
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps proportion without stretching */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
+.banner.active {
+  opacity: 1;
 }
-
-.hero-text .btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #1e90ff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.hero-text .btn:hover {
-  background: #005bbb;
 }
 
 .btn{display:inline-block;background:#fff;color:var(--accent);padding:12px 20px;border-radius:24px;font-weight:700}
