@@ -3,10 +3,47 @@
 *{box-sizing:border-box}
 body{font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:var(--text);margin:0}
 .container{max-width:1000px;margin:0 auto;padding:0 16px}
-.nav{background:#111;color:#fff;padding:12px 0;position:sticky;top:0;z-index:10}
-.nav .container{display:flex;justify-content:space-between;align-items:center}
-.nav-links{display:flex;gap:18px;list-style:none;margin:0}
-.nav a{color:#fff;font-weight:600}
+/* Navbar */
+.navbar {
+  background: #111; /* dark background */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .logo img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #1e90ff; /* blue highlight */
+}
+
 .hero{padding:80px 0;background:linear-gradient(90deg,var(--accent),#4fc3f7);color:#fff;text-align:center}
 .hero h1{font-size:2rem;margin-bottom:8px}
 .btn{display:inline-block;background:#fff;color:var(--accent);padding:12px 20px;border-radius:24px;font-weight:700}
