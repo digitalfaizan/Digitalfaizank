@@ -1,83 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Demo</title>
-  <link rel="stylesheet" href="style.css"> <!-- make sure path is correct -->
-</head>
-<body>
+/* Basic, clean responsive styles */
+:root { --accent:#2196f3; --bg:#f8f9fa; --text:#222; }
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:var(--text);margin:0}
+.container{max-width:1000px;margin:0 auto;padding:0 16px}
+.nav{background:#111;color:#fff;padding:12px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;justify-content:space-between;align-items:center}
+.nav-links{display:flex;gap:18px;list-style:none;margin:0}
+.nav a{color:#fff;font-weight:600}
+.hero{padding:80px 0;background:linear-gradient(90deg,var(--accent),#4fc3f7);color:#fff;text-align:center}
+.hero h1{font-size:2rem;margin-bottom:8px}
+.btn{display:inline-block;background:#fff;color:var(--accent);padding:12px 20px;border-radius:24px;font-weight:700}
+.section{padding:60px 0}
+h2{text-align:center;margin-bottom:24px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.portfolio img {
+  width: 100%;
+  height: auto; /* instead of fixed height */
+  object-fit: contain; /* shows full image inside box */
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="container">
-      <div class="logo"><a href="#">DigitalFaizank</a></div>
-      <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container">
-      <h1>I help businesses grow 🚀</h1>
-      <p>Fast websites • SEO • Chatbots</p>
-      <a class="btn" href="#contact">Work with me</a>
-    </div>
-  </header>
-
-  <!-- Services -->
-  <section id="services" class="section">
-    <div class="container">
-      <h2>Services</h2>
-      <div class="grid">
-        <div class="card"><h3>Website Development</h3><p>Responsive, SEO-ready websites.</p></div>
-        <div class="card"><h3>Chatbots</h3><p>Lead capture automation.</p></div>
-        <div class="card"><h3>SEO</h3><p>Rank higher on Google.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio" class="section portfolio">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <div class="grid">
-        <img src="https://via.placeholder.com/400x200" alt="Work 1">
-        <img src="https://via.placeholder.com/400x200" alt="Work 2">
-        <img src="https://via.placeholder.com/400x200" alt="Work 3">
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <p class="note">I’ll get back to you soon 🚀</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 DigitalFaizank. All rights reserved.</p>
-  </footer>
-
-  <script>
-    // Simple form feedback
-    document.getElementById("contactForm").addEventListener("submit", e => {
-      e.preventDefault();
-      alert("Thanks! Your message was sent.");
-    });
-  </script>
-</body>
-</html>
+form{display:grid;gap:12px;max-width:640px;margin:0 auto}
+input,textarea{padding:12px;border:1px solid #ddd;border-radius:8px}
+button{background:var(--accent);color:#fff;padding:12px;border-radius:8px;border:none;font-weight:700}
+.footer{background:#111;color:#fff;padding:20px;text-align:center;margin-top:40px}
+.note{margin-top:12px;text-align:center}
+@media (max-width:600px){.hero h1{font-size:1.4rem}.portfolio img{height:140px}}
