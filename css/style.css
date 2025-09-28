@@ -75,3 +75,6 @@ button{background:var(--accent);color:#fff;padding:12px;border-radius:8px;border
 .footer{background:#111;color:#fff;padding:20px;text-align:center;margin-top:40px}
 .note{margin-top:12px;text-align:center}
 @media (max-width:600px){.hero h1{font-size:1.4rem}.portfolio img{height:140px}}
+
+
+  
