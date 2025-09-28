@@ -1,30 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // --- Contact Form ---
+  // Contact Form
   const form = document.getElementById("contactForm");
   if (form) {
     form.addEventListener("submit", function(e) {
-      e.preventDefault(); // prevent default reload
+      e.preventDefault();
       fetch(form.action, {
         method: form.method,
         body: new FormData(form),
         headers: { 'Accept': 'application/json' }
       })
-      .then(response => {
-        if (response.ok) {
-          alert("✅ Thanks! Your message was sent. I'll reply soon.");
+      .then(res => {
+        if (res.ok) {
+          alert("✅ Thanks! Your message was sent.");
           form.reset();
         } else {
-          alert("❌ Oops! Something went wrong. Please try again.");
+          alert("❌ Error sending message.");
         }
       })
-      .catch(() => alert("⚠️ Network error. Please try again later."));
+      .catch(() => alert("⚠️ Network error."));
     });
   }
 
-  // --- Banner Slideshow ---
+  // Slideshow
   let current = 0;
   const banners = document.querySelectorAll('.banner');
-
   function changeBanner() {
     if (banners.length > 0) {
       banners[current].classList.remove('active');
@@ -34,8 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   setInterval(changeBanner, 5000);
 
-
-      });
-    });
-  }
+  // Hamburger Menu
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
 });
