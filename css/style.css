@@ -29,6 +29,17 @@
   font-weight: 500;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand .logo {
+  height: 40px;   /* smaller logo */
+  width: auto;
+  margin-right: 10px;
+  object-fit: contain; /* ensures no stretching */
+}
 
 
 body{font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:var(--text);margin:0}
