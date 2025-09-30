@@ -52,29 +52,6 @@ body{font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:
   color: #1e90ff;
 }
 
-
-
-.features {
-    background: rgb(84, 35, 197);
-    padding: 20px;
-    display: flex;
-    flex-direction:row ;
-    
-   }
-   .features figure{
-    margin: auto;
-    text-align: center;
-    width: 200px;
-    text-transform: uppercase;
-    
-   }
-   .features figure img{
-    border: 1px solid white;
-    border-radius: 20px;
-    box-shadow: rgb(148, 135, 135) 0 0 10px;
-    width: 200px;
-
-
      
 .hero{padding:80px 0;background:linear-gradient(90deg,var(--accent),#4fc3f7);color:#fff;text-align:center}
 .hero h1{font-size:2rem;margin-bottom:8px}
