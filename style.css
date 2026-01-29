@@ -7,11 +7,23 @@ body{
   gap:10px;
 }
 header{
-  width:100vw;
-  height:20px;
+ display:flex;
+  justify-content:space-between;
+  align-items:center;
   background-color:#9DC09B
 }
 .logo{
-  height:30px;
-  width:30px;
+  height:50px;
+  width:auto;
+}
+ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+}
+li a{
+  decoration:none;
+  padding: 10px 15px;
+  display:block;
 }
