@@ -2,7 +2,7 @@ body{
   background-color: #edf1d6;
   color: #40513B;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   item-align: center;
   gap:10px;
 }
