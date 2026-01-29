@@ -11,6 +11,8 @@ header{
   justify-content:space-between;
   align-items:center;
   background-color:#9DC09B
+  width:100vw;
+  hieght:60px;
 }
 .logo{
   height:50px;
