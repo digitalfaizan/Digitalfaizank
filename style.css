@@ -3,7 +3,7 @@ body{
   color: #40513B;
   display: flex;
   flex-direction: column;
-  item-align: center;
+  align-items: center;
   gap:10px;
 }
 header{
