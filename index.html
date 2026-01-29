@@ -14,16 +14,17 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#service">Service</a></li>
+          <li><a href="#about"></a></li>
           <li><a href="#contact">contact</a></li>
         </ul>
       </nav>
     </header>
-    <section class="hero"> 
+    <section class="hero" id="home"> 
       <h1>Digital Faizank</h1>
       <p>Hello World</p>
       <button>Buy Now</button>
     </section>
-    <section class="sec2>
+    <section class="sec2" id="service">
       <div class="card1">
            <img src="webimage/1.jpg" alt="card 1 image">
            <h2>Website Devlopment</h2>
@@ -40,14 +41,26 @@
         <p>You like chat, we create bot's "chatbot"</p>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <h2>About Us</h2>
       <p>I help businesses grow online using modern web design, automation, and smart marketing.</p>
     </section>
-    <section class="form">
+    <section class="contact" id="contact">
       <div class="warpper">
+      <h2>contact Form</h2>
+        <p>Contact us and start making money "NOW"</p>
       <form>
-        
+        <lable for="name">Name</lable><br>
+        <input type="text" id="name" name="name" placeholder="jhon" required autofocus><br>
+        <lable for="email">Email</lable><br>
+        <input type="text" id="email" name="email" placeholder="xyz@XYZ.com" requierd autofocus><br>
+        <lable>Choose the service you requier</lable><br>
+        <input type="radio" id="website" name="service"><br>
+        <lable for="website">Website</lable><br>
+        <input type="radio" id="landing" name="service"><br>
+        <lable for="landing">Landing Page</lable>
+        <input type="radio" id="chat" name="service"><br><br>
+        <input type="submit" value="Submit">
       </form>
       </div>
     </section>
