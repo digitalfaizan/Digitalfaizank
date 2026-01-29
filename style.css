@@ -1,0 +1,17 @@
+body{
+  background-color: #edf1d6;
+  color: #40513B;
+  display: flex;
+  flex-direction: row;
+  item-align: center;
+  gap:10px;
+}
+header{
+  width:100vw;
+  height:20px;
+  background-color:#9DC09B
+}
+.logo{
+  height:30px;
+  width:30px;
+}
