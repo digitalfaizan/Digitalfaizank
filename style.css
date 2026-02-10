@@ -1,32 +1,472 @@
-body{
-  background-color: #edf1d6;
-  color: #40513B;
+/* --- RESET & VARIABLES --- */
+:root {
+  --primary: #2563eb; /* AI Blue */
+  --primary-dark: #1e40af;
+  --accent: #0f172a; /* Dark Slate */
+  --text: #334155;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+  --spacing: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--white);
+}
+
+/* --- LAYOUT UTILITIES --- */
+.wapper { /* Keeping your class name 'wapper' */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+  width: 100%;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1, h2, h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+button, .cta-btn, input[type="submit"] {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+/* Burger Menu Hidden on Desktop */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--accent);
+  transition: var(--transition);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #64748b;
+}
+
+.hero button {
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  margin: 10px;
+}
+
+.hero button:first-of-type {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.hero button:first-of-type:hover {
+  background-color: var(--primary-dark);
+}
+
+.hero button:last-of-type {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.hero button:last-of-type:hover {
+  background-color: #e0f2fe;
+}
+
+/* --- PROBLEM SECTION --- */
+.problem {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.problem ul {
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.problem li {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  padding-left: 30px;
+  position: relative;
+}
+
+.problem li::before {
+  content: "✕";
+  color: #ef4444;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.problem h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+/* --- SERVICES (GRID) --- */
+.ser {
+  background-color: var(--bg-light);
+}
+
+.ser .wapper > div { /* targeting the flex/grid container */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.ser-card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+	margin:15px 0;
+}
+
+.ser-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.ser-card ul li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 25px;
+}
+
+.ser-card ul li::before {
+  content: "✓";
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/*--- result ---*/
+.result ul li{
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 25px;
+}
+.result ul li::before {
+  content: "✓";
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+/* --- TESTIMONIALS --- */
+.testi {
+  background-color: var(--white);
+}
+
+.testi-card {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-left: 5px solid var(--primary);
+  margin-bottom: 2rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+/* --- DEMO & CTA --- */
+.demo, .cta {
+  text-align: center;
+  background: var(--accent);
+  color: var(--white);
+}
+
+.demo h2, .cta h2 {
+  color: var(--white);
+}
+
+.demo-btn, .cta button {
+  background: var(--primary);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin: 10px;
+}
+
+.demo-btn:hover, .cta button:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+/* ===== CHATBOT SECTION ===== */
+
+.chatbot{
+background: linear-gradient(180deg,#020617,#020617);
+text-align:center;
+}
+
+.chat-sub{
+max-width:600px;
+margin:0 auto 50px;
+color:#94a3b8;
+}
+
+.chat-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.chat-info{
+text-align:left;
+}
+
+.chat-info ul{
+margin-top:20px;
+}
+
+.chat-info li{
+margin-bottom:12px;
+color:#cbd5f5;
+font-size:1.05rem;
+}
+
+.chat-demo{
+background: rgba(2,6,23,0.9);
+border-radius:16px;
+padding:20px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.chat-placeholder{
+height:420px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:#020617;
+border-radius:12px;
+border:1px dashed rgba(56,189,248,0.3);
+}
+
+.chat-placeholder p{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.chat-placeholder span{
+color:#64748b;
+}
+
+/* --- PROCESS --- */
+.pros {
+  text-align: center;
+}
+.pros p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+/* --- CONTACT FORM --- */
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap:10px;
-  boxing-size:border-box;
+  gap: 1rem;
 }
-header{
- display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background-color:#9DC09B
-  width:100vw;
-  hieght:60px;
+
+.contact label {
+  text-align: left;
+  font-weight: 600;
 }
-.logo{
-  height:50px;
-  width:auto;
+
+.contact input {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
 }
-ul{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
+
+.contact input[type="submit"] {
+  background: var(--primary);
+  color: var(--white);
+  margin-top: 1rem;
 }
-li a{
-  text-decoration:none;
-  padding: 10px 15px;
-  display:block;
+
+.contact h2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.contact a.cta-btn {
+  display: inline-block;
+  background: #25D366; /* WhatsApp Green */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--accent);
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  /* Burger Menu Logic */
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px; /* Adjust based on header height */
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+  
+  .nav-link {
+      display: block;
+      padding: 1.5rem;
+      border-bottom: 1px solid #f1f1f1;
+  }
+
+  /* Typography Adjustments */
+  h2 { font-size: 2rem; }
+  .hero h1 { font-size: 2.2rem; }
+  
+  .hero button, .demo-btn {
+      width: 100%;
+      margin: 10px 0;
+  }
+  /* MOBILE */
+@media(max-width:768px){
+
+.chat-container{
+grid-template-columns:1fr;
+}
+
+.chat-info{
+text-align:center;
+}
+
+.chat-placeholder{
+height:350px;
+}
+
 }
