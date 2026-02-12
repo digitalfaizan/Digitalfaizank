@@ -237,7 +237,7 @@ header {
 
 .result ul {
   display: inline-block;   /* keeps list centered */
-  text-align: center;        /* keeps ticks aligned nicely */
+  text-align: left;        /* keeps ticks aligned nicely */
   margin-top: 20px;
 }
 
@@ -313,7 +313,7 @@ color:#94a3b8;
 
 .chat-container{
 display:flex;
-grid-template-columns:1fr;
+flex-direction:column;
 justify-items:center;
 text-align:center;
 }
