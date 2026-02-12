@@ -239,7 +239,7 @@ header {
   content: "✓";
   color: var(--primary);
   position: absolute;
-  left: 0;
+  text-align:center;
   font-weight: bold;
 }
 /* --- TESTIMONIALS --- */
@@ -301,7 +301,7 @@ align-items:center;
 }
 
 .chat-info{
-text-align:left;
+text-align:center;
 }
 
 .chat-info ul{
@@ -312,13 +312,6 @@ margin-top:20px;
 margin-bottom:12px;
 color:#cbd5f5;
 font-size:1.05rem;
-}
-
-.chat-demo{
-background: rgba(2,6,23,0.9);
-border-radius:16px;
-padding:20px;
-border:1px solid rgba(255,255,255,0.05);
 }
 
 
