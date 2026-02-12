@@ -294,7 +294,7 @@ color:#94a3b8;
 }
 
 .chat-container{
-display:grid;
+display:flex;
 grid-template-columns:1fr 1fr;
 gap:50px;
 align-items:center;
@@ -321,25 +321,6 @@ padding:20px;
 border:1px solid rgba(255,255,255,0.05);
 }
 
-.chat-placeholder{
-height:420px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:#020617;
-border-radius:12px;
-border:1px dashed rgba(56,189,248,0.3);
-}
-
-.chat-placeholder p{
-font-size:20px;
-margin-bottom:10px;
-}
-
-.chat-placeholder span{
-color:#64748b;
-}
 
 /* --- PROCESS --- */
 .pros {
