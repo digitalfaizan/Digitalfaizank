@@ -1,4 +1,4 @@
-/* --- RESET & VARIABLES --- */
+ter/* --- RESET & VARIABLES --- */
 :root {
   --primary: #2563eb; /* AI Blue */
   --primary-dark: #1e40af;
@@ -237,7 +237,7 @@ header {
 
 .result ul {
   display: inline-block;   /* keeps list centered */
-  text-align: left;        /* keeps ticks aligned nicely */
+  text-align: center;        /* keeps ticks aligned nicely */
   margin-top: 20px;
 }
 
@@ -312,7 +312,7 @@ color:#94a3b8;
 }
 
 .chat-container{
-display:grid;
+display:flex;
 grid-template-columns:1fr;
 justify-items:center;
 text-align:center;
