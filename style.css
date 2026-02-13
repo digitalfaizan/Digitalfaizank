@@ -139,24 +139,44 @@ header {
   margin: 10px;
 }
 
-.hero button:first-of-type {
+.hero-btn:first-of-type {
   background-color: var(--primary);
   color: var(--white);
 }
 
-.hero button:first-of-type:hover {
+.hero-btn:first-of-type:hover {
   background-color: var(--primary-dark);
 }
 
-.hero button:last-of-type {
+.hero-btn:last-of-type {
   background-color: transparent;
   border: 2px solid var(--primary);
   color: var(--primary);
 }
 
-.hero button:last-of-type:hover {
+.hero-btn:last-of-type:hover {
   background-color: #e0f2fe;
 }
+
+.hero-btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+margin:10px;
+}
+
+.hero-btn.primary{
+background:var(--primary);
+color:white;
+}
+
+.hero-btn.secondary{
+border:2px solid var(--primary);
+color:var(--primary);
+}
+
 
 /* --- PROBLEM SECTION --- */
 .problem {
@@ -467,6 +487,10 @@ text-align:center;
 
 .chat-placeholder{
 height:350px;
+}
+
+.nav-link{
+  text-decoration: none;
 }
 
 }
