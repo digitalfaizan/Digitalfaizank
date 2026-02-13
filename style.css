@@ -74,10 +74,11 @@ header {
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  height: 100px;
 }
-.logo{
-	width:65vw;
-	height:100px;
+.logo-img{
+	width:300px;
+	height:300px;
 }
 
 .nav-menu {
@@ -90,6 +91,7 @@ header {
   color: var(--accent);
   font-weight: 500;
 }
+
 
 .nav-link:hover {
   color: var(--primary);
